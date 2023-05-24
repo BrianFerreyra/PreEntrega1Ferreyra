@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { ItemListContainer } from "./components/pages/itemlistcontainer/ItemListContainer";
+import Navbar from "./components/layout/navbar/navbar";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  let greeting = "Bienvenido a Resma";
 
   return (
-    
-  )
-}
+    <div>
+      <Navbar />
+      <ItemListContainer greeting={greeting} />
+    </div>
+  );
+};
 
-export default App
+export default App;
