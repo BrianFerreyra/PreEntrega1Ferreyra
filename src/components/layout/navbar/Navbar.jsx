@@ -22,24 +22,34 @@ const Navbar = () => {
       <li>cuadernos</li>
       <li>lapices</li>
       <li>mochilas</li>
-      <TiShoppingCart color="black" size="35px" />
-      <h3
-        style={{
-          textAlign: "center",
-          margin: "10px",
-          fontSize: "13px",
-          backgroundColor: "red",
-          height: "fit-content",
-          width: "16px",
-          borderRadius: "100%",
-          position: "relative",
-          top: "-10px",
-          left: "-140px",
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
         }}
       >
-        {contador}
-      </h3>
-      <Button variant="contained" onClick={() => setcontador(contador + 1)}>
+        <h3
+          style={{
+            textAlign: "center",
+            fontSize: "13px",
+            backgroundColor: "red",
+            height: "fit-content",
+            width: "16px",
+            borderRadius: "100%",
+          }}
+        >
+          {contador}
+        </h3>
+        <TiShoppingCart color="black" size="35px" />
+      </Box>
+      <Button
+        sx={{
+          position: "absolute",
+          top: "200px",
+        }}
+        variant="contained"
+        onClick={() => setcontador(contador + 1)}
+      >
         Añadir al carrito
       </Button>
     </Box>

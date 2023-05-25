@@ -1,4 +1,4 @@
-import { Box, TextField } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 
 export const ItemListContainer = ({ greeting }) => {
   console.log(greeting);
@@ -12,8 +12,9 @@ export const ItemListContainer = ({ greeting }) => {
         gap: "20px",
       }}
     >
-      <h3>{greeting}</h3>
-
+      <Typography variant="h3" color="initial" fontFamily={"Roboto"}>
+        {greeting}
+      </Typography>
       <div>
         <TextField
           id="outlined-basic"
